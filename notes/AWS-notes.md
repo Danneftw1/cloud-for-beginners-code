@@ -52,15 +52,15 @@ Stateful and stateless firewalls are two types of firewalls that filter network 
 
 The choice between stateful and stateless firewalling depends on your specific needs for performance, security and complexity
 
+![Alt text](image-7.png)
 
+Security Groups and Network Access Control Lists (ACLs) are both used for configuring network security in Amazon VPC, but they operate at different levels and offer different types of control.
 
+Now, what's the differences between Security Groups and Network ACL (NACLs)?
 
+![Alt text](image-8.png)
 
-
-
-
-
-
+---
 
 ## Stateful vs Stateless Applications
 
