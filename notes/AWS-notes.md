@@ -20,6 +20,8 @@ IAM Authentication Methods refer to the ways users and services prove their iden
 
 Amazon VPC (Virtual Private Cloud) is a service provided by AWS (Amazon Web Services) that allows you to create an isolated, private network in the cloud. With a VPC, you can define your own network space with IP address ranges, subnets, and security settings. This enables you to run resources like EC2 instances or databases securely and with fine-grained control over network configuration and accessibility.
 
+**Why use a VPC?**: It provides a secure, isolated enviroment for your cloud resources, offering better control over network configuration, improved security, and easy scalability. It resembles a traditional network you'd operate in your own data center.
+
 A subnet, or subnetwork, is a smaller, segmented part of a larger network. It allows you to divide a network into smaller, more manageable pieces for purposes like security, traffic management, or resource allocation. Each subnet has its own unique IP address range, which is a subset of the larger network's IP address range. In the context of an Amazon VPC, you can create multiple subnets to isolate different types of resources or to configure specific access rules.
 
 NAT-gateways is the part that costs money when creating and using VPCs. If you don't know if you're going to use it or don't need it, you can get rid of it by doing this: 
@@ -52,15 +54,24 @@ Stateful and stateless firewalls are two types of firewalls that filter network 
 
 The choice between stateful and stateless firewalling depends on your specific needs for performance, security and complexity
 
+---
+
+## Security Groups & Network ACLs
+
+
 ![Alt text](image-7.png)
+
 
 Security Groups and Network Access Control Lists (ACLs) are both used for configuring network security in Amazon VPC, but they operate at different levels and offer different types of control.
 
-Now, what's the differences between Security Groups and Network ACL (NACLs)?
+* **Security Groups:** These act as virtual firewalls for instances like EC2, controlling inbound and outbound traffic at the instance level. Security groups are stateful, meaning if you allow an incoming request from an IP, the response is automatically allowed, regardless of outbound rules.
+
+* **Network ACLs:** These are similiar to firewalls that control traffic going in and out of a subnet within your VPC. Unlike Security Groups, Network ACLs are stateless, so you need to specify both inbound and outbound rules explicitly. They offer rule numbering and allow you to create rules that deny traffic, giving you more granular ("grainy") control
+
+Both can be used together for layered security, with Security Groups acting as the first line of defense at the instance level and Network ACLs providing broader subnet-level protection.
 
 ![Alt text](image-8.png)
 
----
 
 ## Stateful vs Stateless Applications
 
@@ -81,3 +92,13 @@ The choice between stateful and stateless design depends on your application's n
 * **Vertical:** This involves upgrading the resources on an existing machine, such as adding more RAM, CPU or storage. You're essentially making your individual server more powerful. Vertical scaling often requires downtime for hardware upgrades and has an upper limit defined by the capabilites of the individual servers.
 
 Horizontal scaling is generally more adaptable and can offer better fault tolerance, while vertical scaling is often simpler but has its limitations.
+
+---
+
+# How to guides: 
+
+## Section 5:
+* How to create IAM User and Group? **28**
+* How to create a custom VPC? **30**
+* How to create a Security Group? **32**
+* How to configure AWS CLI (Command Line Interface)? **33** 
