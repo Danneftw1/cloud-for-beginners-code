@@ -95,6 +95,54 @@ Horizontal scaling is generally more adaptable and can offer better fault tolera
 
 ---
 
+# EC2 (Elastic Cloud)
+
+EC2 Provides resizable compute resources in the cloud, making it easier to deploy applications and handle varying workloads. You can launch virtual machines, known as instances, with different configurations of CPU, memory, storage, and  networking capabilities (this is within a VPC). EC2 offers flexibility with options for on-demand pricing, reserved instances, and spot instances, enabling cost optimization based on your needs. It intergrates with many AWS services like Amazon RDS for databases and Amazon S3 for storage, providing a comprehensive enviroment for running applications in the cloud.
+
+![Alt text](image-10.png)
+
+**What are Public, Private, and Elastic IP addresses within EC2?**
+
+* **Public IP:** Temporary, internet-reachable address assigned when an EC2 instance is launched.
+* **Private IP:** Permanent address for internal VPC communaction, not accessible from the internet.
+* **Elastic IP:** Static, public IP you can allocate and keep until you release it. Internet-reachable and can be reassigned to different instances.
+
+Each type serves different use-cases: Public for temporary internet access, Private for internal VPC communication, and Elastic for more control and persistence.
+
+![Alt text](image-11.png)
+
+### Public Subnets:
+A subnet with a route to the internet, typically via an internet Gateway. Instance in a public subnet can have public IP address and can be aaccessed directly from the internet.
+
+![Alt text](image-12.png)
+
+### Private Subnets:
+
+A subnet without direct route to the internet. Instances can communicate within the VPC but can't be accessed directly from the internet. Internet access, if needed, is usually via a NAT Gateway.
+
+![Alt text](image-13.png)
+
+### Launching an EC2 instance
+See How to guides, Section 6 "How to launch an EC2 instance"
+
+---
+
+# Access Keys and IAM Roles with EC2
+
+Using access keys with EC2 is easier, however you risk exposing information to outsiders
+
+![Alt text](image-14.png)
+
+Using roles is instead more secure, however, the initial setup is abit more complex.
+
+![Alt text](image-15.png)
+
+
+
+
+
+
+
 # How to guides: 
 
 ## Section 5:
@@ -102,3 +150,13 @@ Horizontal scaling is generally more adaptable and can offer better fault tolera
 * How to create a custom VPC? **30**
 * How to create a Security Group? **32**
 * How to configure AWS CLI (Command Line Interface)? **33** 
+
+## Section 6: 
+* How to launch an EC2 Instance? **36**
+* How to connect to EC2? **37**
+* How to practise with Access Keys and IAM Roles? **39**
+* How to create a website with User Data? **40**
+
+# Terms and Definitions:
+
+* **S3(Simple Storage Service):** It's a scalable, durable cloud storage service from AWS. It's used for storing and retrieving data like files, backups, or as a backend for applications. Offers features like access control and data versioning.
