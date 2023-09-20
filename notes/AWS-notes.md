@@ -137,6 +137,38 @@ Using roles is instead more secure, however, the initial setup is abit more comp
 
 ![Alt text](image-15.png)
 
+# Amazon EC2 Auto Scaling
+
+AWS EC2 Auto Scaling is a feature in Amazon's cloud computing platform that automatically adjusts the number of active EC2 instances based on demand or predefined conditions. It aims to improve application availability and cost efficiency by scaling resources up or down as needed.
+
+![Alt text](image-16.png)
+
+# Amazon Elastic Load Balancing
+
+Amazon Elastic Load Balancing (ELB) is a cloud service that automatically distributes incoming application traffic across multiple targets, such as EC2 instances. It improves application availability and fault tolerance by redirecting traffic to healthy instances. ELB supports different types of load balancing including HTTP/HTTPS, TCP, and more.
+
+![Alt text](image-17.png)
+![Alt text](image-18.png)
+![Alt text](image-19.png)
+![Alt text](image-20.png)
+
+
+# Amazon EBS and Instance Stores
+
+Amazon Elastic Block Store (EBS) is a cloud storage service designed for use with Amazon EC2 instances. EBS provides scalable and durable block storage, allowing you to attach volumes to your instances for tasks like data storage, backups, and more. It's optimized for both high-performance and high-availability needs.
+
+![Alt text](image-21.png)
+
+Amazon Elastic Block Store (EBS) is a cloud storage service for AWS, designed to work with EC2 instances. EBS provides scalable, durable block-level storage that can be easily attached or detached from instances. It supports various performance needs, allows for snapshots, and offers built-in encryption. It's commonly used for databases and other applications requiring persistent storage.
+
+![Alt text](image-22.png)
+
+EBS Snapshots are point-in-time backups of Amazon Elastic Block Store (EBS) volumes. They provide a way to save the current state of a volume, making it easier to backup data, migrate volumes, and improve disaster recovery. Snapshots are incremental, meaning they only capture changes made since the last snapshot, which saves storage space and cost.
+
+![Alt text](image-23.png)
+
+
+
 
 
 
@@ -157,6 +189,19 @@ Using roles is instead more secure, however, the initial setup is abit more comp
 * How to connect to EC2? **37**
 * How to practise with Access Keys and IAM Roles? **39**
 * How to create a website with User Data? **40**
+* How to create an Auto Scaling Group? **42**
+* How to create a Scaling Policy? **43**
+* How to create an Application Load Balancer? **45**
+
+## Section 7:
+* how to create and attach an EBS Volume **48**
+* EBS Snapshots and AMIs **49**
+* How to Create an Amazon EFS Filesystem **51**
+* How to work with S3 Buckets and Objects **53**
+* How to create an S3 Static Website **54**
+
+## Section 8:
+
 
 # Terms and Definitions:
 
