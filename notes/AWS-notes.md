@@ -293,12 +293,41 @@ AWS Global Accelerator improves application performance and availability by rout
 # Section 11: Containerns and Serverless Computing
 # Docker Containers on Amazon ECS
 
+Amazon ECS (Elastic Container Service) is a fully-managed container management service provided by AWS. It allows you to run, stop, and manage Docker containers on a cluster of EC2 instances or with AWS Fargate for serverless deployments. ECS integrates with other AWS services like ECR for container storage, ELB for load balancing, and IAM for security, making it easier to deploy, manage, and scale containerized applications. It's commonly used for microservices architectures, batch processing, and machine learning applications.
 
+![Alt text](image-47.png)
 
+Amazon ECS (Elastic Container Service) consists of several key components that work together to manage and orchestrate containerized applications. Here are the main components:
 
+![Alt text](image-48.png)
 
+# AWS Lambda
 
+AWS Lambda allows you to execute code without managing servers, offering a serverless architecture. It automatically triggers code execution in response to events such as HTTP requests via API Gateway, modifications in an S3 bucket, or changes in a DynamoDB table. Lambda handles the scaling automatically, running as many instances of the function as needed to handle incoming traffic. Billing is based on the actual compute time your functions consume, making it cost-effective. It seamlessly integrates with other AWS services, making it versatile for tasks like backend processing, data transformation, and real-time file processing. It's a key component for building scalable and cost-efficient applications in the AWS ecosystem.
 
+![Alt text](image-49.png)
+
+# Application Integration Services
+
+AWS offers several serverless services ideal for event-driven architectures:
+
+    AWS Lambda: Executes code in response to events like database changes or HTTP requests.
+
+    Amazon SNS: Manages pub/sub messaging for distributing event notifications.
+
+    Amazon SQS: Queues messages for decoupled, delayed processing.
+
+    API Gateway: Handles HTTP requests and triggers Lambda functions.
+
+    Amazon DynamoDB: NoSQL database that can trigger Lambda with Streams.
+
+    Amazon EventBridge: Routes events from various sources to different AWS services.
+
+    Amazon Kinesis: Streams large amounts of data and triggers processing.
+
+These services work together to handle events, execute code, and manage data, allowing you to build scalable, event-driven applications without managing servers.
+
+![Alt text](image-50.png)
 
 
 
