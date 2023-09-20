@@ -168,10 +168,56 @@ EBS Snapshots are point-in-time backups of Amazon Elastic Block Store (EBS) volu
 ![Alt text](image-23.png)
 
 
+# Amazon Elastic File System (EFS)
+
+Amazon Elastic File System (EFS) is a cloud storage service from AWS designed to provide scalable, elastic, and shared file storage for use with both AWS cloud services and on-premises resources. Unlike block storage services like EBS, EFS allows multiple EC2 instances to access the file system simultaneously, making it ideal for applications that require shared access to files. EFS is commonly used for content management systems, data analytics applications, and backup solutions.
+
+![Alt text](image-24.png)
+
+# Amazon Simple Storage Service (S3)
+
+Amazon Simple Storage Service (S3) is a cloud storage service from AWS that provides scalable, durable, and secure object storage. Unlike block and file storage options like EBS and EFS, S3 is optimized for storing unstructured data objects like files, images, and backups. It offers high availability, versioning, and fine-grained access control. S3 is widely used for backup solutions, data archiving, and content distribution.
+
+![Alt text](image-25.png)
+
+![Alt text](image-26.png)
+
+File Storage uses a folder hierarchy and is good for traditional applications requiring a file system structure. It has limited metadata and is commonly used in network-attached storage (NAS) systems.
+
+Object Storage stores data as individual objects with rich metadata. It's ideal for unstructured data like media files and is commonly used in cloud storage solutions like Amazon S3.
+
+![Alt text](image-27.png)
 
 
+# Amazon Relational Database Service (RDS)
+
+Amazon RDS (Relational Database Service) is a managed database service provided by AWS. It supports multiple database engines like MySQL, PostgreSQL, SQL Server, and Oracle. RDS handles routine database tasks such as backups, patch management, and failover, allowing you to focus on application development. It's designed for ease of setup, scalability, and automated updates.
+
+![Alt text](image-28.png)
+
+Vertical scaling is well-suited for applications that require higher performance from a single database instance, as opposed to distributing loads across multiple instances (horizontal scaling). It's a quick way to boost performance for CPU or memory-bound workloads but is generally limited by the maximum capabilities of the most powerful instance type available.
+
+![Alt text](image-29.png)
+
+### Disaster Recovery:
+
+Amazon RDS supports automated backups, manual snapshots, and Multi-AZ deployments for high availability and easy recovery.
+
+### Scaling Out:
+
+For horizontal scaling, RDS offers Read Replicas to distribute read traffic across multiple instances, improving performance for read-heavy workloads.
+
+![Alt text](image-30.png)
 
 
+# Amazon DynamoDB (noSQL)
+
+Amazon DynamoDB is a fully managed NoSQL database service provided by AWS. It's designed for high-availability and offers seamless scalability. DynamoDB is commonly used for applications requiring low-latency data access, and it supports both key-value and document data models. It also offers features like auto-scaling, in-memory caching, and backup capabilities, making it suitable for mobile, web, and IoT applications.
+
+![Alt text](image-31.png)
+![Alt text](image-32.png)
+
+# Automation and DevOps on AWS
 
 
 
@@ -194,13 +240,16 @@ EBS Snapshots are point-in-time backups of Amazon Elastic Block Store (EBS) volu
 * How to create an Application Load Balancer? **45**
 
 ## Section 7:
-* how to create and attach an EBS Volume **48**
+* How to create and attach an EBS Volume **48**
 * EBS Snapshots and AMIs **49**
 * How to Create an Amazon EFS Filesystem **51**
 * How to work with S3 Buckets and Objects **53**
 * How to create an S3 Static Website **54**
 
 ## Section 8:
+* How to create an Amazon RDS Database **57**
+* How to add an Amazon RDS Read Replica **58**
+* How to create an Amazon DynamoDB Table **60**
 
 
 # Terms and Definitions:
