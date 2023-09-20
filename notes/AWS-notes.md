@@ -1,4 +1,5 @@
 # AWS
+# Section 5: 
 ## IAM Overview (IAM)
 ### AWS Identity and Access Management (IAM)
 
@@ -94,7 +95,7 @@ The choice between stateful and stateless design depends on your application's n
 Horizontal scaling is generally more adaptable and can offer better fault tolerance, while vertical scaling is often simpler but has its limitations.
 
 ---
-
+# Section 6: Amazon EC2, Auto Scaling, and Load Balancing
 # EC2 (Elastic Cloud)
 
 EC2 Provides resizable compute resources in the cloud, making it easier to deploy applications and handle varying workloads. You can launch virtual machines, known as instances, with different configurations of CPU, memory, storage, and  networking capabilities (this is within a VPC). EC2 offers flexibility with options for on-demand pricing, reserved instances, and spot instances, enabling cost optimization based on your needs. It intergrates with many AWS services like Amazon RDS for databases and Amazon S3 for storage, providing a comprehensive enviroment for running applications in the cloud.
@@ -152,7 +153,8 @@ Amazon Elastic Load Balancing (ELB) is a cloud service that automatically distri
 ![Alt text](image-19.png)
 ![Alt text](image-20.png)
 
-
+---
+# Section 7: AWS Storage Services
 # Amazon EBS and Instance Stores
 
 Amazon Elastic Block Store (EBS) is a cloud storage service designed for use with Amazon EC2 instances. EBS provides scalable and durable block storage, allowing you to attach volumes to your instances for tasks like data storage, backups, and more. It's optimized for both high-performance and high-availability needs.
@@ -188,7 +190,8 @@ Object Storage stores data as individual objects with rich metadata. It's ideal 
 
 ![Alt text](image-27.png)
 
-
+---
+# Section 8: Database Services
 # Amazon Relational Database Service (RDS)
 
 Amazon RDS (Relational Database Service) is a managed database service provided by AWS. It supports multiple database engines like MySQL, PostgreSQL, SQL Server, and Oracle. RDS handles routine database tasks such as backups, patch management, and failover, allowing you to focus on application development. It's designed for ease of setup, scalability, and automated updates.
@@ -217,7 +220,94 @@ Amazon DynamoDB is a fully managed NoSQL database service provided by AWS. It's 
 ![Alt text](image-31.png)
 ![Alt text](image-32.png)
 
-# Automation and DevOps on AWS
+---
+# Section 9: Automation and DevOps on AWS
+# Infrastructure as Code with AWS CloudFormation
+
+AWS CloudFormation is a service that helps you model and set up Amazon Web Services resources so you can spend less time managing those resources and more time focusing on your applications. It allows you to use a template file to define all the resources needed for your application, making it easier to manage, replicate, and version-control your AWS infrastructure. CloudFormation automates and simplifies the task of repeatedly and predictably creating and managing AWS resources.
+
+![Alt text](image-33.png)
+![Alt text](image-34.png)
+
+# Platform as a Service with AWS Elastic Beanstalk
+
+![D](image-35.png)
+
+AWS Elastic Beanstalk is a Platform as a Service (PaaS) offering from Amazon Web Services that automates the deployment and scaling of web applications and services. You provide the code, and Elastic Beanstalk handles the underlying infrastructure, including server provisioning, load balancing, and automatic scaling. It supports multiple programming languages and frameworks, making it a flexible choice for developers who want to focus on code rather than infrastructure management.
+
+![Alt text](image-36.png)
+
+
+# Continuous Integration and Continuous Delivery (CI/CD)
+
+CI/CD stands for Continuous Integration and Continuous Deployment, key practices in the DevOps methodology.
+
+    Continuous Integration (CI): Developers regularly merge their code changes into a central repository, where automated tests are run to catch bugs early.
+
+    Continuous Deployment (CD): Automated delivery of code to production without manual intervention, ensuring that you can release new changes to customers quickly and efficiently.
+
+Together, CI/CD aims to minimize the time between writing code and deploying it to production, while ensuring that the software remains in a deployable state at all times. This leads to faster development cycles, quicker bug fixes, and more stable releases.
+
+![Alt text](image-37.png)
+
+![Alt text](image-38.png)
+
+![Alt text](image-39.png)
+
+![Alt text](image-40.png)
+
+---
+# Section 10: DNS, Caching, and Performance Optimization
+# Amazon Route 53 DNS:
+
+Amazon Route 53 is a scalable Domain Name System (DNS) web service from AWS designed to route user requests to endpoints in a globally distributed, low-latency manner. It offers features like domain registration, DNS routing, and health checking of resources within your environment. Route 53 is commonly used to route traffic to various AWS services, such as EC2 instances, S3 buckets, and more, as well as to non-AWS endpoints. It's designed for both high availability and security, making it suitable for mission-critical applications.
+
+![Alt text](image-41.png)
+
+Amazon Route 53 handles DNS resolution by translating domain names into IP addresses. When a user accesses a URL, a DNS query is sent to Route 53, which checks its records and routing policies to determine the correct IP address. The IP is then sent back to the user's device, enabling it to connect to the target service. Route 53 offers high availability and low-latency responses.
+
+![Alt text](image-42.png)
+
+Amazon Route 53 supports various DNS record types to accommodate different needs for domain name resolution and traffic routing
+
+![Alt text](image-43.png)
+
+
+# Amazon CloudFront
+
+CloudFront is all about performance (latency for user etc)
+
+Amazon CloudFront is a Content Delivery Network (CDN) service provided by AWS. It distributes content globally with low latency and high transfer speeds to meet the needs of web applications and services. CloudFront is integrated with other Amazon services, allowing seamless content delivery and compute functionalities. It caches copies of your static and dynamic content at edge locations around the world, enabling quicker delivery and reduced load on your origin servers. Features like SSL/TLS encryption, DDoS protection, and geo-restriction add security layers to your content distribution. It's commonly used to accelerate website load times, stream media, and securely deliver APIs and data.
+
+![Alt text](image-44.png)
+![Alt text](image-45.png)
+
+# AWS Global Accelerator
+
+Works like a networking service, gets you to the best end-point.
+
+AWS Global Accelerator improves application performance and availability by routing user traffic through AWS's global network. It provides static IP addresses for consistent access and automatically directs traffic to the best AWS endpoint based on factors like health and location. It's commonly used for low-latency, high-availability applications like online gaming and streaming.
+
+![Alt text](image-46.png)
+
+# Section 11: Containerns and Serverless Computing
+# Docker Containers on Amazon ECS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -251,7 +341,19 @@ Amazon DynamoDB is a fully managed NoSQL database service provided by AWS. It's 
 * How to add an Amazon RDS Read Replica **58**
 * How to create an Amazon DynamoDB Table **60**
 
+# Section 9:
+* How to create and update stacks **62**
+* How to deploy a VPC using CloudFormation **63**
+* How to create an Elastic Beanstalk Application **65**
+* How to create an AWS CodeCommit Repository **67**
+* AWS CodePipeline with AWS Elastic Beanstalk **68**
 
-# Terms and Definitions:
+# Section 10: 
+* How to register a domain using Route 53 **71**
+* How to create an Amazon CloudFront Distribution **73**
 
-* **S3(Simple Storage Service):** It's a scalable, durable cloud storage service from AWS. It's used for storing and retrieving data like files, backups, or as a backend for applications. Offers features like access control and data versioning.
+# Section 11:
+* How to create an AWS Fargate Cluster **77**
+* How to create an AWS Lambda Function **79**
+* How to create a Serverless Application **81**
+* How to create a REST API with Lambda Proxy Integration **84**
